@@ -1,97 +1,242 @@
 @font-face {
-    font-family: 'Clash Display';
-    src: url(../fonts/ClashDisplay-Light.woff2);
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.woff2);
     font-weight: 200;
 }
 
 @font-face {
-    font-family: 'Clash Display';
-    src: url(../fonts/ClashDisplay-Regular.woff2);
-    font-weight: 400;
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Bold.woff2);
+    font-weight: 200;
 }
 
 @font-face {
-    font-family: 'Clash Display';
-    src: url(../fonts/ClashDisplay-Semibold.woff2);
-    font-weight: 600;
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Black.woff2);
+    font-weight: 200;
 }
 
 @font-face {
-    font-family: 'Clash Display';
-    src: url(../fonts/ClashDisplay-Bold.woff2);
-    font-weight: 900;
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Light.woff2);
+    font-weight: 200;
 }
 
-@font-face {
-    font-family: 'Satoshi';
-    src: url(../fonts/Satoshi-Regular.woff2);
-    font-weight: 900;
-}
-
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --color-white: #FFFFFF;
-    --color-black: #000000;
-    --color-lite-gray: #F9F9F9;
-    --color-dark-primary: #2A254B;
-    --color-nav-linke: #726E8D;
+:root{
+    --color-white: #ffffff;
+    --color-blue: #006690;
+    --color-yellow: #E9D985;
+    --color-dark: #222E50;
 }
 
 header {
-    display: grid;
-    row-gap: 20px;
-    padding: 0 2vw;
-    padding-top: 20px;
+    background-image: linear-gradient( to right, rgba(0, 0, 0, 0.6), rgba(43, 45, 46, 0.6)), url(../images/backImage.jpg);
+    height: 600px;
+    background-repeat:no-repeat;
+    background-position: center center;
 }
 
-header>div {
+header article.header {
+    padding: 20px 250px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    column-gap: 160px;
+}
+
+header article.header>div {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    color: var(--color-white);
+    font-size: 16px;
+    font-family: 'Montserrat';
+}
+
+header article.header nav {
+    justify-self: center;
+}
+
+header article.header nav ul {
+    display: flex;
+    column-gap: 50px;
+}
+
+header article.header nav ul li {
+    list-style-type: none;
+}
+
+header article.header nav ul li a {
+    text-decoration: none;
+    color: var(--color-yellow);
+    font-size: 16px;
+    font-family: 'Montserrat';
+}
+
+header article.header a {
+    text-decoration: none;
+    justify-self: end;
+    font-weight: 600;
+    color: var(--color-white);
+    font-size: 16px;
+    font-family: 'Montserrat';
+}
+
+header article.footer {
+    padding: 30px 250px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+header article.footer span {
+    font-family: 'Montserrat';
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--color-yellow);
+    align-self: center;
+}
+
+header article.footer div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    align-items: center;
+    gap: 20px;
 }
 
-header>div span {
-    justify-self: center;
-    font-size: 24px;
-    font-family: 'Clash Display';
+header article.footer div a {
+    display: block;
+    width: 340px;
+    height: 220px;
 }
 
-header>div div.icons {
-    justify-self: end;
+header article.footer div a img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+main section.korotko {
+    padding: 50px 250px;
     display: grid;
-    column-gap: 1vw;
+    justify-items: center;
+    background-color: var(--color-blue);
+    row-gap: 40px;
+}
+
+main section.korotko span {
+    color: var(--color-yellow);
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+}
+
+main section.korotko p {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: var(--color-yellow);
+    width: 97%;
+}
+
+main section.animals {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 265px;
+    background-color: var(--color-dark);
+    justify-items: center;
+    padding: 50px 250px 228px 250px;
 }
 
-header>div svg {
-    height: 16px;
-    color: var(--color-dark-primary);
+main section.animals span {
+    color: var(--color-yellow);
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    grid-column: 1/3;
 }
 
-header nav {
+main section.animals article {
     display: grid;
+    justify-items: center;
+    padding: 50px 0 0 0;
+}
+
+main section.animals article h3 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    color: var(--color-yellow);
+    padding-bottom: 60px;
+}
+
+main section.animals article div {
+    width: 582px;
+    height: 366px;
+}
+
+main section.animals article div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main section.animals article p {
+    padding: 22px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    color: var(--color-yellow);
+    text-align: center;
+}
+
+main section.animals article p.small {
+    padding: 22px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    color: var(--color-yellow);
+    text-align: center;
+}
+
+footer {
+    padding: 20px 250px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--color-blue);
+}
+
+footer div.social {
+    display: grid;
+    grid-template-columns: repeat(4, 32px);
+    column-gap: 25px;
+    row-gap: 20px;
     justify-items: center;
 }
 
-header nav ul {
-    list-style-type: none;
+footer div.social span {
+    grid-column: 1/5;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    color: var(--color-yellow);
+}
+
+footer h4 {
+    font-size: 20px;
+    font-family: 'Montserrat';
+    color: var(--color-yellow);
     display: flex;
-    column-gap: 4vw;
+    align-items: center;
+    align-self: end;
 }
 
-header nav ul a {
-    text-decoration: none;
-    color: var(--color-nav-linke);
-    font-family: 'Satoshi';
-    font-size: 16px;
-}
-
-header nav ul a:hover {
-    color: var(--color-black);
-    transition: all 0.7s;
+footer div.nimber {
+    display: grid;
+    row-gap: 32px;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    color: var(--color-yellow);
 }
